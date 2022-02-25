@@ -24,7 +24,7 @@ const ResponsiveAppBar = () => {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleCloseNavMenu = (page = null) => {
+  const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
   const history = createBrowserHistory();
@@ -64,11 +64,8 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseNavMenu}
             >
               {pages.map((page) => (
-                <MenuLink
-                  style={{ textDecoration: "none", color: "black" }}
-                  href={`/${page}`}
-                >
-                  <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
+                <MenuLink href={`/${page}`}>
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 </MenuLink>
