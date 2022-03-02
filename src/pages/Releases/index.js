@@ -9,7 +9,7 @@ const Releases = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`${backendUrl}/api/${pageKey}?populate=*`)
+    fetch(`${backendUrl}/api/${pageKey}?sort[0]=catalog_number:asc&populate=*`)
       .then((res) => res.json())
       .then(
         (result) => {
