@@ -30,6 +30,7 @@ const ResponsiveAppBar = () => {
   const history = createBrowserHistory();
 
   const currentPath = history.location.pathname.replace("/", "");
+  console.log(currentPath);
 
   return (
     <AppBarStyled position="static">
@@ -64,7 +65,7 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseNavMenu}
             >
               {pages.map((page) => (
-                <MenuLink href={`/${page}`}>
+                <MenuLink href={`/${page}`} key={page}>
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
@@ -77,7 +78,8 @@ const ResponsiveAppBar = () => {
               <ButtonStyled
                 key={page}
                 active={
-                  page.toLowerCase() === currentPath
+                  page.toLowerCase() === currentPath ||
+                  (currentPath === "" && page === pages[0])
                     ? true.toString()
                     : undefined
                 }
