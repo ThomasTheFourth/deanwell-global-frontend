@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/deanwell-global-frontend/static/css/main.073c9b0a.css",
-    "main.js": "/deanwell-global-frontend/static/js/main.aad26334.js",
+    "main.js": "/deanwell-global-frontend/static/js/main.95c277e4.js",
     "static/js/787.58798d85.chunk.js": "/deanwell-global-frontend/static/js/787.58798d85.chunk.js",
     "index.html": "/deanwell-global-frontend/index.html",
     "main.073c9b0a.css.map": "/deanwell-global-frontend/static/css/main.073c9b0a.css.map",
-    "main.aad26334.js.map": "/deanwell-global-frontend/static/js/main.aad26334.js.map",
+    "main.95c277e4.js.map": "/deanwell-global-frontend/static/js/main.95c277e4.js.map",
     "787.58798d85.chunk.js.map": "/deanwell-global-frontend/static/js/787.58798d85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.aad26334.js"
+    "static/js/main.95c277e4.js"
   ]
 }
