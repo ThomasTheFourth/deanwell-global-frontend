@@ -1,16 +1,32 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import BasicCard from "../../components/BasicCard";
 import { Container } from "./styles";
+import { backendUrl } from "../../constants/global";
+
+const pageKey = "releases";
 
 const Releases = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`${backendUrl}/api/${pageKey}?populate=*`)
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setData(result.data);
+        },
+        (error) => {
+          setData(null);
+        }
+      );
+  }, []);
+  console.log(data);
+
   return (
     <Container>
-      <BasicCard />
-      <BasicCard />
-      <BasicCard />
-      <BasicCard />
-      <BasicCard />
-      <BasicCard />
+      {data.map((release) => (
+        <BasicCard key={release.attributes.catalog_number} release={release} />
+      ))}
     </Container>
   );
 };

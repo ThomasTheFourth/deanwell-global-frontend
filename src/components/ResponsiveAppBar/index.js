@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -30,7 +30,6 @@ const ResponsiveAppBar = () => {
   const history = createBrowserHistory();
 
   const currentPath = history.location.pathname.replace("/", "");
-  console.log(currentPath);
 
   return (
     <AppBarStyled position="static">
