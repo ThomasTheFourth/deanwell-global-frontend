@@ -7,6 +7,7 @@ export default function BasicCard({ release }) {
   const image = `${release.attributes.main_image.data.attributes.formats.medium.url}`;
   const artistName = release.attributes.artist.data.attributes.name;
   const releaseTitle = release.attributes.title;
+  const catalogNumber = release.attributes.catalog_number;
   return (
     <Container>
       <CardContent>
@@ -14,7 +15,9 @@ export default function BasicCard({ release }) {
           <Image src={image} />
         </ImageContainer>
         <Typography variant="h6">{artistName}</Typography>
-        <SecondaryText>{releaseTitle} (DWGM-001)</SecondaryText>
+        <SecondaryText>
+          {releaseTitle} ({catalogNumber})
+        </SecondaryText>
       </CardContent>
     </Container>
   );
