@@ -22,7 +22,7 @@ export default function BasicCard({ release }) {
           {artistName}
         </Typography>
         <SecondaryText>
-          {releaseTitle} ({catalogNumber})
+          {releaseTitle} (DWGM-{catalogNumber})
         </SecondaryText>
       </CardContent>
     </Container>
