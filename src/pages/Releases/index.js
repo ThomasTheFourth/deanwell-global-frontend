@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import BasicCard from "../../components/BasicCard";
+import ReleaseCard from "../../components/ReleaseCard";
 import { Container, LoaderImage, LoaderContainer } from "./styles";
 import { backendUrl } from "../../constants/global";
 import loader from "./loader.gif";
@@ -29,7 +29,7 @@ const Releases = () => {
             Releases
           </Typography>
           {data.map((release) => (
-            <BasicCard
+            <ReleaseCard
               key={release.attributes.catalog_number}
               release={release}
             />

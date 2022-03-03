@@ -8,7 +8,7 @@ import {
   ArtistName,
 } from "./styles";
 
-export default function BasicCard({ release }) {
+export default function ReleaseCard({ release }) {
   const image = `${release.attributes.main_image.data.attributes.formats.small.url}`;
   const artistName = release.attributes.artists.data
     .map((artist) => {
