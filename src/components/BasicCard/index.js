@@ -1,7 +1,12 @@
 import * as React from "react";
-import CardContent from "@mui/material/CardContent";
-import { Image, ImageContainer, SecondaryText, Container } from "./styles";
-import Typography from "@mui/material/Typography";
+import {
+  Image,
+  ImageContainer,
+  SecondaryText,
+  Container,
+  ReleaseCardContent,
+  ArtistName,
+} from "./styles";
 
 export default function BasicCard({ release }) {
   const image = `${release.attributes.main_image.data.attributes.formats.small.url}`;
@@ -17,14 +22,12 @@ export default function BasicCard({ release }) {
       <ImageContainer>
         <Image src={image} />
       </ImageContainer>
-      <CardContent style={{ paddingTop: 8 }}>
-        <Typography variant="h6" sx={{ fontSize: 16 }}>
-          {artistName}
-        </Typography>
+      <ReleaseCardContent>
+        <ArtistName variant="h6">{artistName}</ArtistName>
         <SecondaryText>
           {releaseTitle} (DWGM-{catalogNumber})
         </SecondaryText>
-      </CardContent>
+      </ReleaseCardContent>
     </Container>
   );
 }

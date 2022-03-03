@@ -1,22 +1,15 @@
 import React, { useState, useEffect } from "react";
 import BasicCard from "../../components/BasicCard";
-import {
-  Container,
-  LoaderImage,
-  LoaderContainer,
-  TitleContainer,
-} from "./styles";
+import { Container, LoaderImage, LoaderContainer } from "./styles";
 import { backendUrl } from "../../constants/global";
 import loader from "./loader.gif";
 import Typography from "@mui/material/Typography";
-
-const pageKey = "releases";
 
 const Releases = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`${backendUrl}/api/${pageKey}?sort[1]=catalog_number:desc&populate=*`)
+    fetch(`${backendUrl}/api/releases?sort[1]=catalog_number:desc&populate=*`)
       .then((res) => res.json())
       .then(
         (result) => {

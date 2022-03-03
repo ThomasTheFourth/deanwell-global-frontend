@@ -1,11 +1,10 @@
 import { styled } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
+import { CardContent } from "@mui/material";
 
 export const Container = styled(Card)`
-  // max-width: 300px;
   padding-top: 0;
-  // grid-column: auto-fsit, 20rem;
 `;
 
 export const ImageContainer = styled("div")`
@@ -22,4 +21,12 @@ export const Image = styled("img")`
 
 export const SecondaryText = styled(Typography)`
   font-size: 14px;
+`;
+
+export const ReleaseCardContent = styled(CardContent)`
+  padding-top: 8px;
+`;
+
+export const ArtistName = styled(Typography)`
+  font-size: 16px;
 `;
