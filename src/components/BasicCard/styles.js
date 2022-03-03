@@ -8,16 +8,14 @@ export const Container = styled(Card)`
 `;
 
 export const ImageContainer = styled("div")`
-  display: flex;
-  align-content: center;
-  justify-content: space-evenly;
-  padding: 0 16px 16px 16px;
-  overflow: hidden;
+  padding: 16px 16px 0 16px;
+  width: 268px;
+  height: 268px;
 `;
 
 export const Image = styled("img")`
-  max-height: 300px;
-  max-width: 300px;
+  max-height: 268px;
+  width: 268px;
 `;
 
 export const SecondaryText = styled(Typography)`
