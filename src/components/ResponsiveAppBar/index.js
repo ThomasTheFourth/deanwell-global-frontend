@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -16,7 +16,7 @@ import {
   MenuLink,
 } from "./styles";
 
-const pages = ["RELEASES", "CONTACT"];
+const pages = ["RELEASES", "ARTISTS", "CONTACT"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

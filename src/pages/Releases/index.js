@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReleaseCard from "../../components/ReleaseCard";
-import {
-  Container,
-  LoaderImage,
-  LoaderContainer,
-  PageTitle,
-  EmailForm,
-} from "./styles";
+import { Container, LoaderImage, LoaderContainer, PageTitle } from "./styles";
 import { backendUrl } from "../../constants/global";
 import loader from "./loader.gif";
 
