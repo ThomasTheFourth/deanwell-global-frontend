@@ -21,6 +21,10 @@ const pages = ["RELEASES", "ARTISTS", "CONTACT"];
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
+  const urlPrefix = window.location.href.includes("github")
+    ? "/deanwell-global-frontend"
+    : "";
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -35,7 +39,7 @@ const ResponsiveAppBar = () => {
     <AppBarStyled position="static">
       <Container>
         <Toolbar>
-          <ButtonStyled href="/">
+          <ButtonStyled href={`${urlPrefix}/`}>
             <Title variant="h6">DEANWELL GLOBAL MUSIC</Title>
           </ButtonStyled>
           <HamburgerMenu>
@@ -64,7 +68,7 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseNavMenu}
             >
               {pages.map((page) => (
-                <MenuLink href={`/${page}`} key={page}>
+                <MenuLink href={`${urlPrefix}/${page}`} key={page}>
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
@@ -82,7 +86,7 @@ const ResponsiveAppBar = () => {
                     ? true.toString()
                     : undefined
                 }
-                href={`/${page.toLowerCase()}`}
+                href={`${urlPrefix}/${page.toLowerCase()}`}
               >
                 {page}
               </ButtonStyled>

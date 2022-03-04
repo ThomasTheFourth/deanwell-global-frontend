@@ -11,7 +11,6 @@ function App() {
   const urlPrefix = window.location.href.includes("github")
     ? "/deanwell-global-frontend"
     : "";
-  console.log({ urlPrefix });
   return (
     <>
       <ResponsiveAppBar />
