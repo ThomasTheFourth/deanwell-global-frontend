@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/deanwell-global-frontend/static/css/main.073c9b0a.css",
-    "main.js": "/deanwell-global-frontend/static/js/main.2ce34030.js",
-    "static/js/787.58798d85.chunk.js": "/deanwell-global-frontend/static/js/787.58798d85.chunk.js",
-    "static/media/loader.gif": "/deanwell-global-frontend/static/media/loader.42aaa181adb3af3bef08.gif",
-    "index.html": "/deanwell-global-frontend/index.html",
-    "main.073c9b0a.css.map": "/deanwell-global-frontend/static/css/main.073c9b0a.css.map",
-    "main.2ce34030.js.map": "/deanwell-global-frontend/static/js/main.2ce34030.js.map",
-    "787.58798d85.chunk.js.map": "/deanwell-global-frontend/static/js/787.58798d85.chunk.js.map"
+    "main.css": "/static/css/main.073c9b0a.css",
+    "main.js": "/static/js/main.2f210d0c.js",
+    "static/js/787.58798d85.chunk.js": "/static/js/787.58798d85.chunk.js",
+    "static/media/loader.gif": "/static/media/loader.42aaa181adb3af3bef08.gif",
+    "index.html": "/index.html",
+    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
+    "main.2f210d0c.js.map": "/static/js/main.2f210d0c.js.map",
+    "787.58798d85.chunk.js.map": "/static/js/787.58798d85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.2ce34030.js"
+    "static/js/main.2f210d0c.js"
   ]
 }
