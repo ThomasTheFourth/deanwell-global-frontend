@@ -16,7 +16,7 @@ import {
   MenuLink,
 } from "./styles";
 
-const pages = ["RELEASES", "ARTISTS", "CONTACT"];
+const pages = ["RELEASES", "ARTISTS", "SHOP", "CONTACT"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -45,7 +45,7 @@ const ResponsiveAppBar = () => {
           <HamburgerMenu>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="hamburger-menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}

@@ -17,6 +17,7 @@ export default function ReleaseCard({ release }) {
     .join(" / ");
   const releaseTitle = release.attributes.title;
   const catalogNumber = release.attributes.catalog_number;
+
   return (
     <Container>
       <ImageContainer>
