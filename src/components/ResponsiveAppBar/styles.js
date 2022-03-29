@@ -1,4 +1,5 @@
 import { AppBar, Button, Typography, Box, Link } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const AppBarStyled = styled(AppBar)`
@@ -37,4 +38,12 @@ export const HamburgerMenu = styled(Box)`
 export const MenuLink = styled(Link)`
   text-decoration: none;
   color: black;
+`;
+
+export const CartButton = styled(IconButton)`
+  display: flex;
+  margin-left: auto;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;

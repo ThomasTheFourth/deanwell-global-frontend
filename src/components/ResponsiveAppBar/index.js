@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
+import ShoppingCart from "@mui/icons-material/ShoppingCart";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import { createBrowserHistory } from "history";
@@ -13,6 +14,7 @@ import {
   Title,
   ButtonContainer,
   HamburgerMenu,
+  CartButton,
   MenuLink,
 } from "./styles";
 
@@ -20,6 +22,7 @@ const pages = ["RELEASES", "ARTISTS", "SHOP", "CONTACT"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const cartButton = useRef();
 
   const urlPrefix = window.location.href.includes("github")
     ? "/deanwell-global-frontend"
@@ -35,6 +38,11 @@ const ResponsiveAppBar = () => {
 
   const currentPath = history.location.pathname.replace("/", "");
 
+  const openCart = () => {
+    cartButton.current.click();
+    handleCloseNavMenu();
+  };
+
   return (
     <AppBarStyled position="static">
       <Container>
@@ -42,6 +50,11 @@ const ResponsiveAppBar = () => {
           <ButtonStyled href={`${urlPrefix}/`}>
             <Title variant="h6">DEANWELL GLOBAL MUSIC</Title>
           </ButtonStyled>
+          <button
+            ref={cartButton}
+            style={{ display: "none" }}
+            class="snipcart-checkout"
+          />
           <HamburgerMenu>
             <IconButton
               size="large"
@@ -74,6 +87,11 @@ const ResponsiveAppBar = () => {
                   </MenuItem>
                 </MenuLink>
               ))}
+              <MenuLink>
+                <MenuItem onClick={openCart}>
+                  <Typography textAlign="center">SHOPPING CART</Typography>
+                </MenuItem>
+              </MenuLink>
             </Menu>
           </HamburgerMenu>
           <ButtonContainer>
@@ -92,6 +110,16 @@ const ResponsiveAppBar = () => {
               </ButtonStyled>
             ))}
           </ButtonContainer>
+          <CartButton
+            size="large"
+            aria-label="shopping-crt"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={openCart}
+            color="inherit"
+          >
+            <ShoppingCart />
+          </CartButton>
         </Toolbar>
       </Container>
     </AppBarStyled>
