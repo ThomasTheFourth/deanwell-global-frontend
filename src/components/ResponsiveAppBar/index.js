@@ -112,9 +112,8 @@ const ResponsiveAppBar = () => {
           </ButtonContainer>
           <CartButton
             size="large"
-            aria-label="shopping-crt"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
+            aria-label="shopping-cart"
+            aria-controls="shopping-cart-button"
             onClick={openCart}
             color="inherit"
           >
