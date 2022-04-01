@@ -20,6 +20,20 @@ function App() {
             <Route path={`/shop`} element={<Shop />} />
             <Route path={`/artists`} element={<Artists />} />
             <Route path={`/contact`} element={<Contact />} />
+            <Route path={`/`} element={<Releases />} />
+            <Route
+              path={`/deanwell-global-frontend/releases`}
+              element={<Releases />}
+            />
+            <Route path={`/deanwell-global-frontend/shop`} element={<Shop />} />
+            <Route
+              path={`/deanwell-global-frontend/artists`}
+              element={<Artists />}
+            />
+            <Route
+              path={`/deanwell-global-frontend/contact`}
+              element={<Contact />}
+            />
           </Routes>
         </BrowserRouter>
         <Footer />
