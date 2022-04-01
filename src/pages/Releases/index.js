@@ -12,7 +12,7 @@ const Releases = () => {
       .then((res) => res.json())
       .then(
         (result) => {
-          setData(result.data);
+          if (result?.data) setData(result.data);
         },
         () => {
           setData(null);
