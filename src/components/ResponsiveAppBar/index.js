@@ -24,7 +24,7 @@ const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const cartButton = useRef();
 
-  const urlPrefix = window.location.href.includes("github")
+  const urlPrefix = window.location.href.includes("deanwell-global-frontend")
     ? "/deanwell-global-frontend"
     : "";
 
