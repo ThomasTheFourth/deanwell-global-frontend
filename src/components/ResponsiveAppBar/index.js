@@ -53,7 +53,7 @@ const ResponsiveAppBar = () => {
           <button
             ref={cartButton}
             style={{ display: "none" }}
-            class="snipcart-checkout"
+            className="snipcart-checkout"
           />
           <HamburgerMenu>
             <IconButton
