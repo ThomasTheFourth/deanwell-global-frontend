@@ -1,1 +1,1 @@
-export const backendUrl = "https://d1tg03d9eeos5y.cloudfront.net";
+export const backendUrl = "https://d12wr7ozry99zf.cloudfront.net";
