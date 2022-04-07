@@ -24,10 +24,6 @@ const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const cartButton = useRef();
 
-  const urlPrefix = window.location.href.includes("deanwell-global-frontend")
-    ? "/deanwell-global-frontend"
-    : "";
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -47,7 +43,7 @@ const ResponsiveAppBar = () => {
     <AppBarStyled position="static">
       <Container>
         <Toolbar>
-          <ButtonStyled href={`${urlPrefix}/`}>
+          <ButtonStyled href={"/"}>
             <Title variant="h6">DEANWELL GLOBAL MUSIC</Title>
           </ButtonStyled>
           <button
@@ -81,7 +77,7 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseNavMenu}
             >
               {pages.map((page) => (
-                <MenuLink href={`${urlPrefix}/${page}`} key={page}>
+                <MenuLink href={`/${page.toLocaleLowerCase()}`} key={page}>
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
@@ -104,7 +100,7 @@ const ResponsiveAppBar = () => {
                     ? true.toString()
                     : undefined
                 }
-                href={`${urlPrefix}/${page.toLowerCase()}`}
+                href={`/${page.toLowerCase()}`}
               >
                 {page}
               </ButtonStyled>
