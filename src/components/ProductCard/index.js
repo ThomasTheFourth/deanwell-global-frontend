@@ -8,9 +8,9 @@ import {
   ProductName,
   BuyButton,
 } from "./styles";
+import { backendUrl } from "../../constants/global";
 
 export default function ProductCard({ product }) {
-  console.log(product);
   const image =
     product.attributes.main_image.data.attributes.formats?.medium?.url ||
     product.attributes.main_image.data.attributes.formats?.small?.url;
@@ -24,7 +24,6 @@ export default function ProductCard({ product }) {
   const buyButtonClicked = () => {
     document.getElementById(snipCartId).click();
   };
-  console.log(productOptions);
 
   return (
     <Container>
@@ -47,7 +46,7 @@ export default function ProductCard({ product }) {
           data-item-weight={weight}
           data-item-custom1-name={productOptions ? "Option" : ""}
           data-item-custom1-options={productOptions}
-          data-item-url="https://www.deanwellglobalmusic.com/shop"
+          data-item-url={`${backendUrl}/api/products-list`}
           data-item-description={description}
         ></button>
       </ProductCardContent>
