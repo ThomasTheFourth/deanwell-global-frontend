@@ -1,1 +1,1 @@
-export const backendUrl = "https://deanwell-global-backend.herokuapp.com";
+export const backendUrl = "https://d12wr7ozry99zf.cloudfront.net";
