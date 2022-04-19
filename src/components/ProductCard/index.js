@@ -46,7 +46,7 @@ export default function ProductCard({ product }) {
           data-item-weight={weight}
           data-item-custom1-name={productOptions ? "Option" : ""}
           data-item-custom1-options={productOptions}
-          data-item-url={`${backendUrl}/api/products-list`}
+          data-item-url={`${backendUrl}/api/products-list.json`}
           data-item-description={description}
         ></button>
       </ProductCardContent>
