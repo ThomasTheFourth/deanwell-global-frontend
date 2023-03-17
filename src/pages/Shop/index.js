@@ -3,6 +3,7 @@ import ProductCard from "../../components/ProductCard";
 import { Container, LoaderImage, LoaderContainer, PageTitle } from "./styles";
 import { backendUrl } from "../../constants/global";
 import loader from "./loader.gif";
+import FeaturedProductCard from "../../components/FeaturedProductCard";
 
 const Shop = () => {
   const [data, setData] = useState([]);
