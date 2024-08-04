@@ -7,7 +7,6 @@ import Artists from "./pages/Artists";
 import Shop from "./pages/Shop";
 import Footer from "./components/Footer";
 import { AppContainer } from "./styles";
-import { SiteMessage, SiteMessageContainer } from './components/SiteMessage';
 
 function App() {
   return (
