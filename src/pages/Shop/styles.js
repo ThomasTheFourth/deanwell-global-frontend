@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Card, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const Container = styled("div")`
@@ -6,10 +6,6 @@ export const Container = styled("div")`
   padding-left: 16px;
   padding-right: 16px;
   max-width: 1024px;
-  justify-content: center;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, 20rem);
 `;
 
 export const LoaderContainer = styled("div")`

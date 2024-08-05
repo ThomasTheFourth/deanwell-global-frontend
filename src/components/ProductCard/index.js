@@ -32,23 +32,25 @@ export default function ProductCard({ product }) {
       </ImageContainer>
       <ProductCardContent>
         <ProductName variant="h6">{title}</ProductName>
-        <SecondaryText>{description}</SecondaryText>
-        <BuyButton onClick={buyButtonClicked}>Add to Cart</BuyButton>
-        <button
-          variant="contained"
-          className="snipcart-add-item"
-          style={{ display: "none" }}
-          id={snipCartId}
-          data-item-id={snipCartId}
-          data-item-image={image}
-          data-item-name={title}
-          data-item-price={price}
-          data-item-weight={weight}
-          data-item-custom1-name={productOptions ? "Option" : ""}
-          data-item-custom1-options={productOptions}
-          data-item-url={`${backendUrl}/api/products-list.json`}
-          data-item-description={description}
-        ></button>
+        <div>
+          <SecondaryText>{description}</SecondaryText>
+          <BuyButton onClick={buyButtonClicked}>Add to Cart</BuyButton>
+            <button
+              variant="contained"
+              className="snipcart-add-item"
+              style={{ display: "none" }}
+              id={snipCartId}
+              data-item-id={snipCartId}
+              data-item-image={image}
+              data-item-name={title}
+              data-item-price={price}
+              data-item-weight={weight}
+              data-item-custom1-name={productOptions ? "Option" : ""}
+              data-item-custom1-options={productOptions}
+              data-item-url={`${backendUrl}/api/products-list.json`}
+              data-item-description={description}
+            ></button>
+        </div>
       </ProductCardContent>
     </Container>
   );

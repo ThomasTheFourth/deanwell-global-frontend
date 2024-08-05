@@ -3,6 +3,7 @@ import ArtistCard from "../../components/ArtistCard";
 import { Container, LoaderImage, LoaderContainer, PageTitle } from "./styles";
 import { backendUrl } from "../../constants/global";
 import loader from "./loader.gif";
+import { CardGridContainer } from '../../components/CardGridContainer/styles';
 
 const Artists = () => {
   const [data, setData] = useState([]);
@@ -24,9 +25,11 @@ const Artists = () => {
     <>
       <Container>
         <PageTitle variant="h1">Artists</PageTitle>
-        {data.map((artist) => (
-          <ArtistCard key={artist.attributes.name} artist={artist} />
-        ))}
+        <CardGridContainer>
+          {data.map((artist) => (
+            <ArtistCard key={artist.attributes.name} artist={artist} />
+          ))}
+        </CardGridContainer>
       </Container>
       {!data.length && (
         <LoaderContainer>

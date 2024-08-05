@@ -12,15 +12,17 @@ export const Container = styled(Card)`
 export const ImageContainer = styled("div")`
   display: flex;
   align-items: center;
-  height: 300px;
   overflow: hidden;
   margin: 0 auto;
   background-color: #fbfbfb;
+  min-height: 400px;
+  @media (max-width: 600px) {
+    min-height: 0;
+  }
 `;
 
 export const Image = styled("img")`
-  width: -webkit-fill-available;
-  max-height: 300px;
+  width: 100%;
 `;
 
 export const SecondaryText = styled(Typography)`
@@ -41,4 +43,5 @@ export const ProductName = styled(Typography)`
 export const BuyButton = styled(Button)`
   color: white;
   background-color: black !important;
+  margin-top: auto;
 `;
