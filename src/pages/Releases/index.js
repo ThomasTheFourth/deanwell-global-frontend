@@ -30,10 +30,9 @@ const Releases = () => {
         (result) => {
           const featuredProduct = result.data.filter((item) => item.attributes.featured);
           if (featuredProduct?.length) setFeatured(featuredProduct[0].attributes);
-          setData(result.data);
         },
         () => {
-          setData(null);
+          setFeatured(null);
         }
       );
   }, []);
