@@ -43,7 +43,7 @@ const Releases = () => {
         {!!featured ? <FeaturedProductCard product={featured} /> : ''}
         <PageTitle variant="h1">Releases</PageTitle>
         <CardGridContainer>
-          {data.map((release) => (
+          {data.length && data.map((release) => (
             <ReleaseCard
               key={release.attributes.catalog_number}
               release={release}
