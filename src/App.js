@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <SiteMessageContainer>
-        <SiteMessage>Notice: We will be closed from July 5th to July 14th. Any order placed during this time will ship after the 14th.</SiteMessage>
+        <SiteMessage>Notice: We will be closed from December 22nd to December 27th. Any order placed during this time will ship after the 27th.</SiteMessage>
       </SiteMessageContainer>
       <ResponsiveAppBar />
  
