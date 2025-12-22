@@ -5,7 +5,6 @@ import {
   LoaderImage,
   LoaderContainer,
   PageTitle,
-  GridContainer,
   // FeaturedContainer,
 } from "./styles";
 import { backendUrl } from "../../constants/global";
