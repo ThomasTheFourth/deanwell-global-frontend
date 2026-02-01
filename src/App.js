@@ -12,11 +12,7 @@ import { SiteMessage, SiteMessageContainer } from './components/SiteMessage';
 function App() {
   return (
     <>
-      <SiteMessageContainer>
-        <SiteMessage>Notice: We will be closed from December 22nd to December 27th. Any order placed during this time will ship after the 27th.</SiteMessage>
-      </SiteMessageContainer>
       <ResponsiveAppBar />
- 
       <AppContainer>
         <BrowserRouter>
           <Routes>
