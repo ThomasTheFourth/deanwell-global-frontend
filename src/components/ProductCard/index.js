@@ -44,6 +44,9 @@ export default function ProductCard({ product }) {
           data-item-name={title}
           data-item-price={price}
           data-item-weight={weight}
+          data-item-width="12"
+          data-item-height="12"
+          data-item-length="1"
           data-item-custom1-name={productOptions ? "Option" : ""}
           data-item-custom1-options={productOptions}
           data-item-url={`${backendUrl}/api/products-list.json`}
