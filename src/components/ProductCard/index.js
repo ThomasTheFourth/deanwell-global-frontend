@@ -21,14 +21,15 @@ export default function ProductCard({ product }) {
   return (
     <Container>
       <ImageContainer>
-        <Image src={image} />
+        <Image src={image} alt={title} />
       </ImageContainer>
       <ProductCardContent>
         <ProductName variant="h6">{title}</ProductName>
         <SecondaryText>{description}</SecondaryText>
         <BuyButton onClick={buyButtonClicked}>Add to Cart</BuyButton>
         <button
-          variant="contained"
+          aria-hidden="true"
+          tabIndex={-1}
           className="snipcart-add-item"
           style={{ display: "none" }}
           id={snipCartId}

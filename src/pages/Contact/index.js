@@ -19,6 +19,7 @@ export const Contact = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const sendEmail = (e) => {
+    e.preventDefault();
     setFormSubmitted(true);
     const formValid = form.current.reportValidity();
     if (formValid) {
@@ -45,29 +46,28 @@ export const Contact = () => {
       <SecondaryTitle variant="h6">Email</SecondaryTitle>
       <EmailForm ref={form} onSubmit={sendEmail}>
         <EmailTextField
-          hiddenLabel
-          label="name"
+          label="Name"
           name="from_name"
           variant="outlined"
           required
+          id="contact-name"
         />
         <EmailTextField
-          hiddenLabel
-          label="email"
+          label="Email"
           type="email"
           name="reply_to"
           variant="outlined"
           required
+          id="contact-email"
         />
         <MessageTextField
-          hiddenLabel
-          label="message"
-          type="message"
+          label="Message"
           multiline
           minRows={4}
           name="message"
           variant="outlined"
           required
+          id="contact-message"
         />
         {emailSent && (
           <EmailAlert

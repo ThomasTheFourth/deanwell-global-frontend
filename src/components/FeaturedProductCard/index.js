@@ -21,14 +21,15 @@ export default function FeaturedProductCard({ product }) {
   return (
     <Container>
       <ImageContainer>
-        <Image src={image} />
+        <Image src={image} alt={title} />
       </ImageContainer>
       <FeaturedProductCardContent>
         <FeaturedProductName variant="h6">{title}</FeaturedProductName>
         <SecondaryText>{description}</SecondaryText>
         <BuyButton onClick={buyButtonClicked}>Add to Cart</BuyButton>
         <button
-          variant="contained"
+          aria-hidden="true"
+          tabIndex={-1}
           className="snipcart-add-item"
           style={{ display: "none" }}
           id={snipCartId}

@@ -12,7 +12,7 @@ export default function ReleaseCard({ release }) {
   return (
     <Container>
       <ImageContainer>
-        <Image src={release.image} />
+        <Image src={release.image} alt={`${release.artists.join(" / ")} - ${release.title}`} />
       </ImageContainer>
       <ReleaseCardContent>
         <ArtistName variant="h6">{release.artists.join(" / ")}</ArtistName>

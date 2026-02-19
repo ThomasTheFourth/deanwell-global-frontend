@@ -40,7 +40,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBarStyled position="static">
+    <AppBarStyled position="static" component="nav" aria-label="Main navigation">
       <Container>
         <Toolbar>
           <ButtonStyled href={"/"}>
@@ -50,11 +50,13 @@ const ResponsiveAppBar = () => {
             ref={cartButton}
             style={{ display: "none" }}
             className="snipcart-checkout"
+            aria-hidden="true"
+            tabIndex={-1}
           />
           <HamburgerMenu>
             <IconButton
               size="large"
-              aria-label="hamburger-menu"
+              aria-label="Open navigation menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}

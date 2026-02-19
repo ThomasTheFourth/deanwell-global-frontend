@@ -12,7 +12,7 @@ export default function ArtistCard({ artist }) {
   return (
     <Container>
       <ImageContainer>
-        <Image src={artist.image} />
+        <Image src={artist.image} alt={artist.name} />
       </ImageContainer>
       <ReleaseCardContent>
         <ArtistName variant="h6">{artist.name}</ArtistName>

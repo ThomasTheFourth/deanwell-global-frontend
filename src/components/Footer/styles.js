@@ -1,6 +1,6 @@
 import { styled } from "@mui/system";
 
-export const Container = styled("div")`
+export const Container = styled("footer")`
   margin: 24px auto 0 auto;
   max-width: 992px;
   justify-content: center;

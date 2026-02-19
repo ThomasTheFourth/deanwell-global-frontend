@@ -11,16 +11,21 @@ import { AppContainer } from "./styles";
 function App() {
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <ResponsiveAppBar />
       <AppContainer>
         <BrowserRouter>
-          <Routes>
-            <Route path={"/"} element={<Releases />} />
-            <Route path={"/releases"} element={<Releases />} />
-            <Route path={"/shop"} element={<Shop />} />
-            <Route path={"/artists"} element={<Artists />} />
-            <Route path={"/contact"} element={<Contact />} />
-          </Routes>
+          <main id="main-content">
+            <Routes>
+              <Route path={"/"} element={<Releases />} />
+              <Route path={"/releases"} element={<Releases />} />
+              <Route path={"/shop"} element={<Shop />} />
+              <Route path={"/artists"} element={<Artists />} />
+              <Route path={"/contact"} element={<Contact />} />
+            </Routes>
+          </main>
         </BrowserRouter>
         <Footer />
       </AppContainer>
