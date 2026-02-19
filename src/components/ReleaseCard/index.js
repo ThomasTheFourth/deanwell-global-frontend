@@ -9,24 +9,15 @@ import {
 } from "./styles";
 
 export default function ReleaseCard({ release }) {
-  const image = `${release?.attributes?.main_image?.data?.attributes?.formats?.small?.url}`;
-  const artistName = release?.attributes?.artists?.data
-    .map((artist) => {
-      return artist.attributes.name;
-    })
-    .join(" / ");
-  const releaseTitle = release?.attributes?.title;
-  const catalogNumber = release?.attributes?.catalog_number;
-
   return (
     <Container>
       <ImageContainer>
-        <Image src={image} />
+        <Image src={release.image} />
       </ImageContainer>
       <ReleaseCardContent>
-        <ArtistName variant="h6">{artistName}</ArtistName>
+        <ArtistName variant="h6">{release.artists.join(" / ")}</ArtistName>
         <SecondaryText>
-          {releaseTitle} (DWGM-{catalogNumber})
+          {release.title} (DWGM-{release.catalogNumber})
         </SecondaryText>
       </ReleaseCardContent>
     </Container>

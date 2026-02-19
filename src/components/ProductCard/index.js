@@ -8,18 +8,11 @@ import {
   ProductName,
   BuyButton,
 } from "./styles";
-import { backendUrl } from "../../constants/global";
 
 export default function ProductCard({ product }) {
-  const image =
-    product.attributes.main_image.data.attributes.formats?.medium?.url ||
-    product.attributes.main_image.data.attributes.formats?.small?.url;
-  const { title, description, snipCartId, price, weight } = product.attributes;
-  const productOptions = product.attributes.product_options.data
-    .map((option) => {
-      return option.attributes.option;
-    })
-    .join("|");
+  const { title, description, snipCartId, price, weight, image, options } =
+    product;
+  const productOptions = options.join("|");
 
   const buyButtonClicked = () => {
     document.getElementById(snipCartId).click();
@@ -49,7 +42,7 @@ export default function ProductCard({ product }) {
           data-item-length="1"
           data-item-custom1-name={productOptions ? "Option" : ""}
           data-item-custom1-options={productOptions}
-          data-item-url={`${backendUrl}/api/products-list.json`}
+          data-item-url="/shop"
           data-item-description={description}
         ></button>
       </ProductCardContent>

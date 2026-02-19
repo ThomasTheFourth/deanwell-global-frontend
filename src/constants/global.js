@@ -1,1 +1,1 @@
-export const backendUrl = "https://d12wr7ozry99zf.cloudfront.net";
+// Backend URL no longer needed - data is served from local JSON files
