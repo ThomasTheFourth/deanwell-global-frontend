@@ -23,6 +23,10 @@ export const LoaderImage = styled("img")`
 `;
 
 export const PageTitle = styled(Typography)`
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
   font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   grid-column: 1/-1;
 `;

@@ -1,6 +1,17 @@
 import { Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
+export const Tagline = styled(Typography)`
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #666;
+  grid-column: 1/-1;
+  margin-bottom: 8px;
+`;
+
 export const Container = styled("div")`
   margin: 24px auto 0 auto;
   padding-left: 16px;
@@ -23,6 +34,10 @@ export const LoaderImage = styled("img")`
 `;
 
 export const PageTitle = styled(Typography)`
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
   font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   grid-column: 1/-1;
 `;

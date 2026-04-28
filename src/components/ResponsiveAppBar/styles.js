@@ -14,6 +14,9 @@ export const ButtonStyled = styled(Button)`
 `;
 
 export const Title = styled(Typography)`
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
   &:hover {
     color: grey;
   }

@@ -13,7 +13,11 @@ export const Container = styled("div")`
 `;
 
 export const PageTitle = styled(Typography)`
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
   font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   grid-column: 1/-1;
 `;
 
@@ -40,7 +44,18 @@ export const SubmitButton = styled(Button)`
     props.disabled ? "grey" : "black"} !important;
 `;
 
+export const Intro = styled("p")`
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 24px;
+`;
+
 export const SecondaryTitle = styled(Typography)`
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   margin-top: 16px;
   font-size: 16px;
 `;

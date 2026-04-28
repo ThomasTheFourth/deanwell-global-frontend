@@ -35,6 +35,8 @@ export const ProductCardContent = styled(CardContent)`
 `;
 
 export const ProductName = styled(Typography)`
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
   font-size: 16px;
 `;
 

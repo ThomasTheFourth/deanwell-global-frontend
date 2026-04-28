@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import {
   Container,
   PageTitle,
+  Intro,
   EmailTextField,
   MessageTextField,
   EmailAlert,
@@ -43,6 +44,9 @@ export const Contact = () => {
   return (
     <Container>
       <PageTitle variant="h1">Contact</PageTitle>
+      <Intro>
+        Got a demo? Want to say hi? We read everything.
+      </Intro>
       <SecondaryTitle variant="h6">Email</SecondaryTitle>
       <EmailForm ref={form} onSubmit={sendEmail}>
         <EmailTextField
