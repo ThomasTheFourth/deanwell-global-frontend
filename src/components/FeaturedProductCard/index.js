@@ -43,7 +43,7 @@ export default function FeaturedProductCard({ product }) {
           data-item-length="1"
           data-item-custom1-name={productOptions ? "Option" : ""}
           data-item-custom1-options={productOptions}
-          data-item-url="/shop"
+          data-item-url="/products-list.json"
           data-item-description={description}
         ></button>
       </FeaturedProductCardContent>
