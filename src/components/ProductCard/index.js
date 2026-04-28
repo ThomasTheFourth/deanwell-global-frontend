@@ -43,7 +43,7 @@ export default function ProductCard({ product }) {
           data-item-length="1"
           data-item-custom1-name={productOptions ? "Option" : ""}
           data-item-custom1-options={productOptions}
-          data-item-url="/products-list.json"
+          data-item-url="https://www.deanwellglobalmusic.com/products-list.json"
           data-item-description={description}
         ></button>
       </ProductCardContent>
