@@ -6,7 +6,6 @@ import Contact from "./pages/Contact";
 import Artists from "./pages/Artists";
 import Shop from "./pages/Shop";
 import Footer from "./components/Footer";
-import { SiteMessageContainer, SiteMessage } from "./components/SiteMessage";
 import { AppContainer } from "./styles";
 
 function App() {
@@ -15,12 +14,6 @@ function App() {
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
-      <SiteMessageContainer>
-        <SiteMessage>
-          We will be closed from June 24th through July 6th. Any orders placed
-          during this time will ship after July 6th. Thank you for your patience!
-        </SiteMessage>
-      </SiteMessageContainer>
       <ResponsiveAppBar />
       <AppContainer>
         <BrowserRouter>
