@@ -18,7 +18,15 @@ import {
   MenuLink,
 } from "./styles";
 
-const pages = ["RELEASES", "ARTISTS", "SHOP", "CONTACT"];
+const pages = ["RELEASES", "ARTISTS", "SHOP", "SUBMIT", "CONTACT"];
+
+// Most nav paths are just the lowercased label, but a few differ.
+const pagePaths = {
+  SUBMIT: "/submissions",
+};
+
+const pathFor = (page) => pagePaths[page] || `/${page.toLowerCase()}`;
+const slugFor = (page) => pathFor(page).replace("/", "");
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -79,7 +87,7 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseNavMenu}
             >
               {pages.map((page) => (
-                <MenuLink href={`/${page.toLocaleLowerCase()}`} key={page}>
+                <MenuLink href={pathFor(page)} key={page}>
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
@@ -97,12 +105,12 @@ const ResponsiveAppBar = () => {
               <ButtonStyled
                 key={page}
                 active={
-                  page.toLowerCase() === currentPath ||
+                  slugFor(page) === currentPath ||
                   (currentPath === "" && page === pages[0])
                     ? true.toString()
                     : undefined
                 }
-                href={`/${page.toLowerCase()}`}
+                href={pathFor(page)}
               >
                 {page}
               </ButtonStyled>
