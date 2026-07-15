@@ -18,15 +18,10 @@ import {
   MenuLink,
 } from "./styles";
 
-const pages = ["RELEASES", "ARTISTS", "SHOP", "SUBMIT", "CONTACT"];
+const pages = ["RELEASES", "ARTISTS", "SHOP", "SUBMISSIONS", "CONTACT"];
 
-// Most nav paths are just the lowercased label, but a few differ.
-const pagePaths = {
-  SUBMIT: "/submissions",
-};
-
-const pathFor = (page) => pagePaths[page] || `/${page.toLowerCase()}`;
-const slugFor = (page) => pathFor(page).replace("/", "");
+const pathFor = (page) => `/${page.toLowerCase()}`;
+const slugFor = (page) => page.toLowerCase();
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

@@ -27,7 +27,8 @@ import {
 const SUBMISSION_TYPES = [
   "Reissue of a forgotten or rediscovered project",
   "Current, active band seeking a release",
-  "The leftist, queer, anti-fascist compilation",
+  "COMPILATION: leftist, queer, and anti-fascist synth music",
+  "COMPILATION: Atlanta Synth Now!",
 ];
 
 export const Submissions = () => {
@@ -91,29 +92,45 @@ export const Submissions = () => {
   return (
     <Container>
       <PageTitle variant="h1">Submissions</PageTitle>
-      <Intro>
-        Got a forgotten project, a bedroom recording, or a rediscovered tape?
-        We want to hear it. Anything from any decade that never saw the light of
-        day, or that sparked in a scene time forgot. Punk, metal, EBM, synth,
-        new wave, post punk, and anything adjacent. We also want to hear from
-        current, active bands looking for a release.
-      </Intro>
+      <Intro>Send us your material. Here's what we're after.</Intro>
 
       <CalloutBox>
-        <CalloutTitle variant="h2">Current bands</CalloutTitle>
+        <CalloutTitle variant="h2">Forgotten projects</CalloutTitle>
         <CalloutText>
-          Active band looking for a release? We put out tape, CD, and digital to
-          start, with vinyl depending on traction. Pick the current band option
-          in the form below and send us your links.
+          Got a forgotten project, a bedroom recording, or a rediscovered tape
+          from any decade? Things that never saw the light of day, or that
+          sparked in a scene time forgot. Punk, metal, EBM, synth, synthpop, synth punk, new wave,
+          post punk, goth, and adjacent. We would love to hear it.
         </CalloutText>
       </CalloutBox>
 
       <CalloutBox>
-        <CalloutTitle variant="h2">Compilation call</CalloutTitle>
+        <CalloutTitle variant="h2">Current bands</CalloutTitle>
         <CalloutText>
-          Open call for a vinyl compilation of leftist, queer, anti-fascist
-          music. Synth, industrial, synthpop, techno, and adjacent sounds. Tick
-          the compilation option in the form to be considered.
+          Active band seeking a release? We work with newer acts on tape, CD,
+          and digital releases. Vinyl depending on
+          traction. Punk, metal, EBM, synth, synthpop, synth punk, new wave, post punk, goth, and
+          adjacent. We would love to hear it.
+        </CalloutText>
+      </CalloutBox>
+
+      <CalloutBox>
+        <CalloutTitle variant="h2">
+          COMPILATION: leftist, queer, and anti-fascist synth music
+        </CalloutTitle>
+        <CalloutText>
+          Open call for a vinyl compilation of leftist, queer, and anti-fascist
+          music. Synth, EBM, industrial, synthpop, techno, goth, and adjacent
+          sounds. Send us your track!
+        </CalloutText>
+      </CalloutBox>
+
+      <CalloutBox>
+        <CalloutTitle variant="h2">COMPILATION: Atlanta Synth Now!</CalloutTitle>
+        <CalloutText>
+          Anything synth related that's an active project playing shows in
+          Atlanta right now. Synth, EBM, techno, industrial, synthpop, and
+          anything adjacent. Send us your track!
         </CalloutText>
       </CalloutBox>
 
@@ -187,7 +204,7 @@ export const Submissions = () => {
           required
           multiline
           minRows={2}
-          helperText="Bandcamp, SoundCloud, Google Drive, WeTransfer, Dropbox, and similar."
+          helperText="Bandcamp, SoundCloud, YouTube, Google Drive, WeTransfer, Dropbox, and similar."
           id="submission-links"
         />
         <FormTextField
