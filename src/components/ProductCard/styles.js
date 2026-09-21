@@ -10,6 +10,7 @@ export const Container = styled(Card)`
 `;
 
 export const ImageContainer = styled("div")`
+  position: relative;
   display: flex;
   align-items: center;
   height: 300px;
@@ -21,6 +22,7 @@ export const ImageContainer = styled("div")`
 export const Image = styled("img")`
   width: -webkit-fill-available;
   max-height: 300px;
+  opacity: ${({ soldOut }) => (soldOut ? 0.55 : 1)};
 `;
 
 export const SecondaryText = styled(Typography)`
@@ -43,4 +45,34 @@ export const ProductName = styled(Typography)`
 export const BuyButton = styled(Button)`
   color: white;
   background-color: black !important;
+
+  &:disabled {
+    color: #cccccc;
+    background-color: #6e6e6e !important;
+  }
+`;
+
+export const SoldOutRibbon = styled("div")`
+  position: absolute;
+  bottom: 28px;
+  right: -54px;
+  width: 200px;
+  padding: 6px 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  background-color: black;
+  transform: rotate(-45deg);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+`;
+
+export const SoldOutText = styled(Typography)`
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
 `;

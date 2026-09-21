@@ -15,7 +15,8 @@
     "weight": 550,
     "snipCartId": "DWGM-9 - Asylum Party - Picture One - Vinyl Record LP - Clear",
     "image": "/images/small_picture_one_d4caf1e08c.jpeg",
-    "options": ["clear[+2.00]"]
+    "options": ["black"],
+    "soldOut": true
   },
   {
     "title": "Ian Deaton - Glamour Profession",
