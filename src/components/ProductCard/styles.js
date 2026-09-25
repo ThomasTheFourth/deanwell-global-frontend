@@ -42,6 +42,14 @@ export const ProductName = styled(Typography)`
   font-size: 16px;
 `;
 
+export const BuyButtonRow = styled("div")`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+`;
+
 export const BuyButton = styled(Button)`
   color: white;
   background-color: black !important;

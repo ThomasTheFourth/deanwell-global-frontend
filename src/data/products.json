@@ -82,6 +82,24 @@
     "options": ["clear yellow[+1.00]", "clear black and yellow[+2.00]"]
   },
   {
+    "title": "Überchriist - Dæmonic Apotheosis",
+    "price": 28,
+    "description": "Gatefold Vinyl LP",
+    "weight": 700,
+    "snipCartId": "DWGM-24 - Uberchriist - Daemonic Apotheosis - Gatefold Vinyl LP",
+    "image": "/images/small_uberchriist_daemonic_apotheosis.jpg",
+    "options": ["black"]
+  },
+  {
+    "title": "Überchriist - Dæmonic Apotheosis",
+    "price": 12,
+    "description": "CD",
+    "weight": 130,
+    "snipCartId": "DWGM-24 - Uberchriist - Daemonic Apotheosis - CD",
+    "image": "/images/small_uberchriist_daemonic_apotheosis.jpg",
+    "options": []
+  },
+  {
     "title": "US Drag - Self-titled",
     "price": 5,
     "description": "Cassette Tape",
